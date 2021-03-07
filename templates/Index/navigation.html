@@ -1,0 +1,66 @@
+ {% load static %}
+ <style>
+ 
+ 
+  .nav-effect::after{
+    content: "";
+    background: white;
+    mix-blend-mode: exclusion;
+    width: calc(100% + 20px);
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+  
+  .nav-effect:hover::after{
+    height: calc(100% + 8px)
+  }
+ </style>
+ 
+ 
+ <!-- ======= Header ======= -->
+ <header id="header" class="fixed-top ">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center">
+        <div class="col-xl-9 d-flex align-items-center">
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <a href="/" class="logo mr-auto"><img src="{% static 'img/techmelba/logo2.png' %}" alt="" class="img-fluid"></a>
+
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li class=""><a class="nav-effect" href="/">Home</a></li>
+              <li><a class="nav-effect" href="/about">About</a></li>
+              <li><a class="nav-effect" href="/service">Services</a></li>
+              <li><a class="nav-effect" href="/projects">Project</a></li>
+              <li><a class="nav-effect" href="/team">Team</a></li>
+              <!-- <li class="drop-down"><a href="">Drop Down</a>
+                <ul>
+                  <li><a href="#">Drop Down 1</a></li>
+                  <li class="drop-down"><a href="#">Deep Drop Down</a>
+                    <ul>
+                      <li><a href="#">Deep Drop Down 1</a></li>
+                      <li><a href="#">Deep Drop Down 2</a></li>
+                      <li><a href="#">Deep Drop Down 3</a></li>
+                      <li><a href="#">Deep Drop Down 4</a></li>
+                      <li><a href="#">Deep Drop Down 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Drop Down 2</a></li>
+                  <li><a href="#">Drop Down 3</a></li>
+                  <li><a href="#">Drop Down 4</a></li>
+                </ul>
+              </li> -->
+              <li><a class="nav-effect" href="/contact">Contact</a></li>
+
+            </ul>
+          </nav><!-- .nav-menu -->
+
+          <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
+        </div>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
