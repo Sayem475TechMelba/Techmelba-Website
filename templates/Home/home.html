@@ -27,7 +27,6 @@
       width: 100%;
       height: 100%;
   }
-
   #about .icon-boxes {
     margin-top: 100px;
   }
@@ -103,6 +102,43 @@
       line-height: 24px;
     }
   }
+  /*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+.counter {
+  padding: 70px 0 60px;
+}
+
+.counter .count-box {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+}
+
+.counter .count-box i {
+  font-size: 42px;
+  line-height: 0;
+  margin-right: 20px;
+  color: #4154f1;
+}
+
+.counter .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #0b198f;
+}
+
+.counter .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
 
 
   /*--------------------------------------------------------------
@@ -157,8 +193,13 @@
 .about .btn-read-more:hover i {
   transform: translateX(5px);
 }
+.animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
 
-  
+
+
+
 </style>
 {% endblock css %}
 
@@ -192,7 +233,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon">
-                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid"></a>
+                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid animated "></a>
               </div>
               <h4 class="title"><a href="">Graphics Design</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolor...</p>
@@ -202,7 +243,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon">
-                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon4.png' %}" alt="" class="img-fluid"></a>
+                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon4.png' %}" alt="" class="img-fluid animated"></a>
               </div>
               <h4 class="title"><a href="">Web Development</a></h4>
               <p class="description">Duis aute irure dolor in reprehenderit in...</p>
@@ -212,7 +253,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
               <div class="icon">
-                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid"></a>
+                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid animated"></a>
               </div>
               <h4 class="title"><a href="">Mobile App Development</a></h4>
               <p class="description">Excepteur sint occaecat cupidatat non proident...</p>
@@ -222,7 +263,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
             <div class="icon-box">
               <div class="icon">
-                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon4.png' %}" alt="" class="img-fluid"></a>
+                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon4.png' %}" alt="" class="img-fluid animated"></a>
               </div>
               <h4 class="title"><a href="">SEO</a></h4>
               <p class="description">At vero eos et accusamus et iusto odio... </p>
@@ -243,31 +284,257 @@
 
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content">
-              <h4>About Us</h4>
+              <h1>About Us</h1>
               <h6>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h6>
               <p>
-                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
-                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.Quisquam vel ut sint cum eos hic<br><br> dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+                Quisquam vel nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit volu<br><br> dolores aperiam. Sed deserunt et. Inventore et et doipit voluptatum nam et est corrupti.
               </p>
               <div class="text-lg-start">
-                <a href="#" class="btn-read-more ">
-                  <span>Read More</span>
-                </a>
+                <a href="#0" class="button12">
+                  <em> </em>   
+                   <span>
+                     Find Out More
+                     </span>
+                 </a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{% static 'img/about.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
           </div>
 
         </div>
       </div>
     </section>
     <!-- End About Section -->
+  </main>
+
+      <!-- ======= Counts Section ======= -->
+      <section id="counter" class="counter">
+        <div class="container-fluid" data-aos="fade-up">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="icofont-slightly-smile animated" style="color:gold;"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="1356" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Clients</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="icofont-handshake-deal animated" style="color: #c72d06;"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Completed Projects</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="icofont-network-tower animated" style="color: #15be56;"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Countries</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="icofont-users-alt-5 animated" style="color: #9a09ee;"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Team Members</p>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section>
+      <!-- End Counts Section -->
+
+      <section class="development">
+        <div class="container">
+          <div class="row" >
+            <div class="col-lg-6 d-flex " data-aos="zoom-out" data-aos-delay="200">
+              <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+            </div>
+            <div class="col-lg-6 p-4 " data-aos="zoom-out" data-aos-delay="200">
+              <h1>Web Development</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, temporibus quis voluptatum nobis voluptatibus quae nam. Deserunt itaque assumenda enim repellendus libero suscipit dolore accusantium, omnis ad dolor repudiandae maiores?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestiae quia, quam est perferendis voluptatem, adipisci quisquam, rerum nihil magnam dicta sequi libero vitae a ad consequuntur nulla facilis obcaecati.</p>
+              <a href="#0" class="button12">
+                <em> </em>   
+                 <span>
+                   Find Out More
+                   </span>
+               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="graphics">
+        <div class="container">
+          <div class="row" >
+            <div class="col-lg-6  p-4" data-aos="zoom-out" data-aos-delay="200">
+              <h1>Graphics Design</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, temporibus quis voluptatum nobis voluptatibus quae nam. Deserunt itaque assumenda enim repellendus libero suscipit dolore accusantium, omnis ad dolor repudiandae maiores?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestiae quia, quam est perferendis voluptatem, adipisci quisquam, rerum nihil magnam dicta sequi libero vitae a ad consequuntur nulla facilis obcaecati.</p>
+              <a href="#0" class="button12">
+                <em> </em>   
+                 <span>
+                   Find Out More
+                   </span>
+               </a>
+            </div>
+            <div class="col-lg-6  " data-aos="zoom-out" data-aos-delay="200">
+              <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seo">
+        <div class="container">
+          <div class="row" >
+            <div class="col-lg-6 d-flex " data-aos="zoom-out" data-aos-delay="200">
+              <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+            </div>
+            <div class="col-lg-6 p-4 " data-aos="zoom-out" data-aos-delay="200">
+              <h1>SEO</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, temporibus quis voluptatum nobis voluptatibus quae nam. Deserunt itaque assumenda enim repellendus libero suscipit dolore accusantium, omnis ad dolor repudiandae maiores?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestiae quia, quam est perferendis voluptatem, adipisci quisquam, rerum nihil magnam dicta sequi libero vitae a ad consequuntur nulla facilis obcaecati.</p>
+              <a href="#0" class="button12">
+                <em> </em>   
+                 <span>
+                   Find Out More
+                   </span>
+               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header text-center">
+          <h2>Services we provide</h2>
+          <p>Veritatis et dolores facere numquam et praesentium</p>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box blue">
+              <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid animated "></a>
+              <h3>Software Development</h3>
+              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-box orange">
+              <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid animated "></a>
 
 
+              <h3>Web Development</h3>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
+          <div class="col-lg-4 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-box green">
+              <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid animated "></a>
+
+              <h3>Logo Designinig</h3>
+              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-box red">
+              <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid animated "></a>
+
+              <h3>Graphics Design</h3>
+              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-box purple">
+              <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid animated "></a>
+
+              <h3>Apps Development</h3>
+              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-box pink">
+              <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid animated "></a>
+
+              <h3>SEO</h3>
+              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- End Services Section -->
+ <!-- ======= project Section ======= -->
+ <main id="main">
+  <section id="about" class="about">
+
+    <div class="container" data-aos="fade-up">
+      <div class="row gx-0">
+        <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+        </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="">
+            <h1>Our Projects</h1>
+            <h6>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h6>
+            <p>
+              Quisquam vel nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+              Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit volu<br><br> dolores aperiam. Sed deserunt et. Inventore et et doipit voluptatum nam et est corrupti.
+            </p>
+            <div class="text-lg-start">
+              <a href="#0" class="button12">
+                <em> </em>   
+                 <span>
+                   Find Out More
+                   </span>
+               </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+</main>
 
 {% endblock body %}
 
