@@ -27,19 +27,24 @@
   <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
 
   <style>
+    body {
+      font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+      color: black;
+    }
+    
     #header .logo img {
       max-height: 50px;
-  }
-  section {
-    overflow: hidden;
-  }
+    }
+    section {
+      overflow: hidden;
+    }
 /* Btn 12 */
 
 .button12 {
   cursor: pointer;
   background-color: #000;
   height: 64px;
-  padding:20px 15px;
+  padding:20px 1px;
   line-height: 64px;
   position: relative;
   transform: translate(-50%, -50%);
@@ -265,7 +270,9 @@
 .services .service-box:hover .icon {
   background: #fff;
 }
-
+#hero .container, #hero .container-fluid {
+  padding-top: 1px;
+}
   
   </style>
   {% block css %}
@@ -300,10 +307,31 @@
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js'%}"></script>
   <script type="text/javascript" src="{% static 'js/particles.min.js'%}"></script>
-  <script src="{% static 'js/particles.js' %}"></script>
+  <!-- <script src="{% static 'js/particles.js' %}"></script> -->
   <script src="{% static 'js/app.js'%}"></script>
   <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
   <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:false,
+      autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+  })
+  </script>
 
 
 

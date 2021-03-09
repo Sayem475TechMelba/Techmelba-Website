@@ -1,10 +1,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #f00000;
-}
 
 a {
   color: #5846f9;
@@ -416,9 +412,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 
-#hero .container, #hero .container-fluid {
-  padding-top: 84px;
-}
+
 
 #hero h1 {
   margin: 0;

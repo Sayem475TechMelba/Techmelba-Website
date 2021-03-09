@@ -40,7 +40,9 @@
     transition: all 0.3s ease-in-out;
     border-radius: 8px;
     z-index: 1;
+    background: linear-gradient(to right, rgba(86, 58, 250, 0.9), rgba(116, 15, 214, 0.9));
   }
+
   
   #about .icon-box .title {
     font-weight: 700;
@@ -49,7 +51,7 @@
   }
   
   #about .icon-box .title a {
-    color: #124265;
+    color: #eff5fa;
     transition: 0.3s;
   }
   
@@ -196,7 +198,17 @@
 .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
-
+.section-about{
+  background-color: rgb(4 99 78);
+  color:white;
+}
+.about-head{
+  font-size: 36px;
+  font-weight: 1000;
+}
+.text-small{
+  font-size:13px;
+}
 
 
 
@@ -230,12 +242,12 @@
     <div id="about" class="d-flex align-items-center mb-5">
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row icon-boxes">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-md-6 col-lg-3 d-flex bg align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon">
                 <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid animated "></a>
               </div>
-              <h4 class="title"><a href="">Graphics Design</a></h4>
+              <h4 class="title "><a href="">Graphics Design</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolor...</p>
             </div>
           </div>
@@ -276,7 +288,62 @@
   </div>
   <!-- End Hero --> 
   <!-- ======= About Section ======= -->
-  <main id="main">
+  <div>
+    <div class="row" data-aos="fade-up">
+      <div class="col-lg-6 section-about p-5  ">
+        <div class="ml-5 mt-4">
+          <p ><span class=" about-head ">Build Your Website, Logo</span> <br><span class="text-small">Expedita voluptas omnis cupiditate totam eveniet nobis sint iste </span> </p><br><br>
+
+          <p ><span class="about-head ">About <span class="text-warning">T</span>ech<span style="color:blue">M</span>elba</span></p>
+          
+
+          <p>
+            Quisquam vel nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+            Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit volu
+
+          <div class="row">
+            <div class="col-md-6 p-4">
+              <hr style="color:white; border: 0.5px solid rgb(253, 253, 253);">
+              <p>Quisquam vel nam ipsum tenetur suscipit voluptatum nam et est corrupti.</p>
+              <ul>
+                <li>Web Design</li>
+                <li>Web Design</li>
+                <li>Web Design</li>
+                <li>Web Design</li>
+                <li>Web Design</li>
+              </ul>
+            </div>
+            <div class="col-md-6 p-4">
+              <hr style="color:white; border: 1px solid rgb(253, 253, 253);">
+              <p>Quisquam vel nam ipsum tenetur suscipit voluptatum nam et est corrupti.</p>
+              <ul>
+                <li>Web Design</li>
+                <li>Web Design</li>
+                <li>Web Design</li>
+                <li>Web Design</li>
+                <li>Web Design</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-lg-start">
+            <a href="#0" class="button12">
+              <em> </em>   
+              <span>
+                Our Journey
+                </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 ">
+        <img src="{% static 'img/about.jpg' %}"  class=" img-fluid animated justify-content-center align-items-center text-center mt-5" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- <main id="main">
     <section id="about" class="about">
 
       <div class="container-fluid" data-aos="fade-up">
@@ -308,12 +375,12 @@
         </div>
       </div>
     </section>
-    <!-- End About Section -->
-  </main>
+  </main> -->
+  <!-- End About Section -->
 
       <!-- ======= Counts Section ======= -->
       <section id="counter" class="counter">
-        <div class="container-fluid" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
   
           <div class="row gy-4">
   
@@ -363,8 +430,8 @@
       </section>
       <!-- End Counts Section -->
 
-      <section class="development">
-        <div class="container">
+      <section class="development ">
+        <div class="container mt-5">
           <div class="row" >
             <div class="col-lg-6 d-flex " data-aos="zoom-out" data-aos-delay="200">
               <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
@@ -383,8 +450,8 @@
         </div>
       </section>
 
-      <section class="graphics">
-        <div class="container">
+      <section class="graphics ">
+        <div class="container mt-5">
           <div class="row" >
             <div class="col-lg-6  p-4" data-aos="zoom-out" data-aos-delay="200">
               <h1>Graphics Design</h1>
@@ -404,7 +471,7 @@
       </section>
 
       <section class="seo">
-        <div class="container">
+        <div class="container mt-5">
           <div class="row" >
             <div class="col-lg-6 d-flex " data-aos="zoom-out" data-aos-delay="200">
               <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
@@ -425,7 +492,7 @@
 
       
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <section id="services" class="services mt-5">
 
       <div class="container" data-aos="fade-up">
 
@@ -509,7 +576,23 @@
     <div class="container" data-aos="fade-up">
       <div class="row gx-0">
         <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+            </div>
+            <div class="item">
+              <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+            </div>
+            <div class="item">
+              <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+            </div>
+            <div class="item">
+              <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+            </div>
+            <div class="item">
+              <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+            </div>
+          </div>
         </div>
         <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
           <div class="">
@@ -523,7 +606,7 @@
               <a href="#0" class="button12">
                 <em> </em>   
                  <span>
-                   Find Out More
+                   View All Projects
                    </span>
                </a>
             </div>
@@ -536,8 +619,32 @@
   <!-- End About Section -->
 </main>
 
+<div class="mt-5" style="background-color:#DF9926; color:white;">
+  <div class="row">
+    <div class="col-lg-6 p-5 mt-5">
+      <div class="ml-5">
+        <h1>Hello Guys</h1>
+        
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ducimus adipisci suscipit qui expedita exercitationem dolores illo officia voluptate distinctio ratione labore nisi sapiente quos, quas eius? Consequuntur, dignissimos autem?</p>
+        <div class="text-lg-start">
+          <a href="#0" class="button12">
+            <em> </em>   
+            <span>
+              Our Journey
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <img src="{% static 'img/what.png' %}"  class=" img-fluid animated justify-content-center align-items-center text-center" alt="">
+    </div>
+  </div>
+</div>
+
 {% endblock body %}
 
 {% block script %}
+
 
 {% endblock script %}
