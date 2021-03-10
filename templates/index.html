@@ -28,7 +28,8 @@
 
   <style>
     body {
-      font-family: "Tungsten A", "Tungsten B", "Khand", sans-serif;
+      font-family: "Graphik SemiBold","Arial",Sans-Serif !important;
+
       color: black;
     }
     
@@ -273,6 +274,12 @@
 #hero .container, #hero .container-fluid {
   padding-top: 1px;
 }
+
+#header.header-scrolled, #header.header-inner-pages {
+  background: rgba(15, 15, 15, 0.8);
+  padding: 12px 0;
+}
+
   
   </style>
   {% block css %}
@@ -294,6 +301,7 @@
 
   <!-- Vendor JS Files -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js" integrity="sha512-A2+khatRDWHUE2VUtN4xUTkr1nc4YfDBw9Sg3ea6x0aRPfpcYieDZji4D2edDHy/yF5NsYzP7kL8sSM8s5EqCw==" crossorigin="anonymous"></script>
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
   <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
@@ -332,6 +340,30 @@
       }
   })
   </script>
+  
+  <script>
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      $(".zoom").css({
+        backgroundSize: (100 + scroll/5)  + "%",
+        top: -(scroll/10)  + "%",
+    
+        //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
+        //"-webkit-filter": "blur(" + (scroll/200) + "px)",
+        //filter: "blur(" + (scroll/200) + "px)"
+      });
+    });
+    </script>
+ 
 
 
 
