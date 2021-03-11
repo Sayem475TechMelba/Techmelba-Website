@@ -7,8 +7,6 @@
 <style>
   .header{
     background:url("../img/hero-bg.jpg") center center no-repeat;
-
-
   }
   #hero {
     width: 100%;
@@ -16,6 +14,62 @@
     /*background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("static/img/glob2.jpg") center center no-repeat;*/
     background: linear-gradient(45deg, rgba(24, 24, 26, 0.9) 0%, rgba(12, 12, 12, 0.9) 100%), url("static/img/glob2.jpg") center center no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    position:relative;
+  }
+  section .wave{
+    position:absolute;
+    width:100%;
+    height: 143px;
+    bottom:0;
+    left:0;
+    background: url(static/img/wave.png);
+    animation: animate 10s linear infinite;
+  }
+  section .wave:before{
+    content: '';
+    width:100%;
+    height: 143px;
+    background: url(static/img/wave.png);
+    animation: animate 10s linear infinite;
+    position:absolute;
+    left:0;
+    top:0;
+    opacity: 0.4;
+    animation-delay: -5s;
+    animation: animate-reverse 10s linear infinite;
+  }
+  section .wave:after{
+    content: '';
+    width:100%;
+    height: 143px;
+    background: url(static/img/wave.png);
+    animation: animate 10s linear infinite;
+    position:absolute;
+    left:0;
+    top:0;
+    opacity: 0.6;
+    animation-delay: -5s;
+    animation: animate 20s linear infinite;
+  }
+ 
+   @keyframes animate {
+    0%{
+      background-position: 0;
+    }
+    100%{
+      background-position: 1360px;
+    }
+    
+  }
+  @keyframes animate-reverse {
+    0%{
+      background-position: 1360px;
+    }
+    100%{
+      background-position: 0;
+    }
+    
   }
   .img{
     height: 100%;
@@ -33,11 +87,11 @@
       width: 100%;
       height: 100%;
   }
-  #about .icon-boxes {
+  #services .icon-boxes {
     margin-top: 100px;
   }
   
-  #about .icon-box {
+  #services .icon-box {
     padding: 50px 30px;
     position: relative;
     overflow: hidden;
@@ -47,27 +101,27 @@
     border-radius: 8px;
     z-index: 1;
     color:white;
-    background:linear-gradient(to right,  #494940 0%,#292930  10%); 
+    background:linear-gradient(to right,  #040400 0%,#0c2138  10%); 
   }
   
-  #about .icon-box .title {
+  #services .icon-box .title {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 18px;
   }
   
-  #about .icon-box .title a {
+  #services .icon-box .title a {
     color: #eff5fa;
     transition: 0.3s;
   }
   
-  #about .icon-box .description {
+  #services .icon-box .description {
     font-size: 15px;
     line-height: 28px;
     margin-bottom: 0;
   }
   
-  #about .icon-box .icon {
+  #services .icon-box .icon {
     margin-bottom: 20px;
     padding-top: 10px;
     display: inline-block;
@@ -77,11 +131,11 @@
     color: #2487ce;
   }
   
-  #about .icon-box:hover {
+  #services .icon-box:hover {
     transform: scale(1.08);
   }
   
-  #about .icon-box:hover .title a {
+  #services .icon-box:hover .title a {
     color: #2487ce;
   }
   
@@ -92,20 +146,20 @@
   }
   
   @media (max-height: 800px) {
-    #about {
+    #services {
       height: auto;
     }
   }
   
   @media (max-width: 992px) {
-    #about {
+    #services {
       height: auto;
     }
-    #about h1 {
+    #services h1 {
       font-size: 28px;
       line-height: 36px;
     }
-    #about h2 {
+    #services h2 {
       font-size: 18px;
       line-height: 24px;
     }
@@ -152,62 +206,46 @@
   /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .content {
-  background-color: #f6f9ff;
-  padding: 40px;
+
+#about {
+  width: 100%;
+  height: auto;
+  background: #f7f7f7;
+  padding-top: 120px;
 }
 
-.about h3 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #4154f1;
-  text-transform: uppercase;
+#about .div-img-bg {
+  padding-bottom: 30px;
+  border: 20px solid #b8a07e;
 }
 
-.about h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #012970;
+#about .div-img-bg .about-img img {
+  width: 100%;
+  box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+  margin-top: -60px;
+  margin-left: 40px;
+  height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
-.about p {
-  margin: 15px 0 30px 0;
-  line-height: 24px;
+#about .about-descr .p-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  text-align: left;
 }
 
-.about .btn-read-more {
-  line-height: 0;
-  padding: 15px 40px;
-  border-radius: 4px;
-  transition: 0.5s;
-  color: #fff;
-  background: #4154f1;
-  box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
+#about .about-descr .separator {
+  max-width: 80%;
+  margin-bottom: 0;
+  text-align: left;
 }
 
-.about .btn-read-more span {
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
 
-.about .btn-read-more i {
-  margin-left: 5px;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.about .btn-read-more:hover i {
-  transform: translateX(5px);
-}
 .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
-.section-about{
-  background-color: rgb(3, 89, 70);
-  color:white;
-}
+
 .about-head{
   font-size: 36px;
   font-weight: 1000;
@@ -215,8 +253,6 @@
 .text-small{
   font-size:13px;
 }
-
-
 
 .title h1{
 	text-align: center;
@@ -249,8 +285,6 @@ p{
   background:  #e9eae9;
 }
 
-
-
 </style>
 {% endblock css %}
 
@@ -258,6 +292,7 @@ p{
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
+    <div class="wave"></div>
     <div  class="container-fluid" data-aos="fade-up">
       <div id="particles-js">
       <div  class="row justify-content-center">
@@ -278,7 +313,7 @@ p{
 
   <!-- ======= Hero Section ======= -->
   <div class="header">
-    <div id="about" class="d-flex align-items-center mb-5">
+    <div id="services" class="d-flex align-items-center mb-5">
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
         <div class="row icon-boxes">
           <div class="col-md-6 col-lg-3 d-flex bg align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
@@ -328,17 +363,39 @@ p{
     </div>
   </div>
   <!-- End Hero --> 
+
+  <div id="about" class="paddsection">
+    <div class="container">
+      <div class="row justify-content-between">
+
+        <div class="col-lg-4 ">
+          <div class="div-img-bg">
+            <div class="about-img">
+              <img src="{% static 'img/team/testimonials-4.jpg' %}" class="img-responsive animated" alt="me">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="about-descr mt-2">
+            <h3>ABOUT COMPANY</h3>
+            <p class="p-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia blanditiis quam ! </p>
+            <p class="separator">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, id vitae quia, excepturi error ut maiores i ea sit a!</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
   
   <!-- ======= About Section ======= -->
-  <div>
+  <!-- <div>
     <div class="row" data-aos="fade-up">
       <div class="col-lg-6 section-about p-5  ">
         <div class="ml-5 mt-4">
-          <!-- <h1>Build Your Website, Logo <br><span class="text-small">Expedita voluptas omnis cupiditate totam eveniet nobis sint iste </span> </h1><br><br> -->
 
           <h2>About <span class="text-warning">T</span>ech<span style="color:blue">M</span>elba</h2>
-          
-
           <p>
             Quisquam vel nam ipsum tenetur suscipit voluptatum nam et est corrupti.
             Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit volu
@@ -383,7 +440,7 @@ p{
         <img src="{% static 'img/about.jpg' %}"  class=" img-fluid animated justify-content-center align-items-center text-center mt-5" alt="">
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- <main id="main">
     <section id="about" class="about">
@@ -441,7 +498,7 @@ p{
                 <i class="icofont-handshake-deal animated" style="color: #c72d06;"></i>
                 <div>
                   <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
-                  <p>Completed Projects</p>
+                  <p>Projects</p>
                 </div>
               </div>
             </div>
@@ -465,9 +522,7 @@ p{
                 </div>
               </div>
             </div>
-  
           </div>
-  
         </div>
       </section>
       <!-- End Counts Section -->
