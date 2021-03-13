@@ -284,6 +284,27 @@ p{
 .bg-seo{
   background:  #e9eae9;
 }
+#parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
+}
+.text {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Arial";
+  text-transform: uppercase;
+  opacity: .2;
+  font-size: 70px;
+}
+
 
 </style>
 {% endblock css %}
@@ -302,7 +323,7 @@ p{
           <!-- <div><a href="#about" class="btn-get-started scrollto">Get Started</a></div> -->
         </div>
         <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-          <img style="width:80%; height:100%;" src="{% static 'img/banner/rob3.png' %}"  class="img-fluid animated" alt="">
+          <img src="{% static 'img/banner/web-hosting-1.png' %}"  class="img-fluid animated" alt="">
         </div>
 
       </div>
@@ -319,7 +340,7 @@ p{
           <div class="col-md-6 col-lg-3 d-flex bg align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon">
-                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid animated "></a>
+                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/design-graphics.png' %}" alt="" class="img-fluid animated "></a>
               </div>
               <h4 class="title "><a href="">Graphics Design</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolor...</p>
@@ -341,9 +362,9 @@ p{
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
               <div class="icon">
-                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/icon1.png' %}" alt="" class="img-fluid animated"></a>
+                <a href="#" class="logo mr-auto"><img src="{% static 'img/icons/unnamed.png' %}" alt="" class="img-fluid animated"></a>
               </div>
-              <h4 class="title"><a href="">App Development</a></h4>
+              <h4 class="title"><a href="">Web Hosting</a></h4>
               <p class="description">Excepteur sint occaecat cupidatat non proident...</p>
             </div>
           </div>
@@ -364,8 +385,14 @@ p{
   </div>
   <!-- End Hero --> 
 
-  <div id="about" class="paddsection">
-    <div class="container">
+  <!-- <div id="parallax">
+    <h1 class="text">Parallax</h1>
+  </div> -->
+
+
+
+    <div id="about" class="paddsection">
+      <div class="container">
       <div class="row justify-content-between">
 
         <div class="col-lg-4 ">
@@ -531,7 +558,7 @@ p{
         <div class="container-fluid mt-5">
           <div class="row" >
             <div class="col-lg-6 d-flex " data-aos="zoom-out" data-aos-delay="200">
-              <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+              <img src="{% static 'img/sideBanner/features-2.png' %}" class="img-fluid animated " alt="">
             </div>
             <div class="col-lg-6 p-4 " data-aos="zoom-out" data-aos-delay="200">
               <h1>Web Development</h1>
@@ -561,7 +588,7 @@ p{
                </a>
             </div>
             <div class="col-lg-6  " data-aos="zoom-out" data-aos-delay="200">
-              <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+              <img src="{% static 'img/sideBanner/features.png' %}" class="img-fluid animated" alt="">
             </div>
           </div>
         </div>
@@ -571,7 +598,7 @@ p{
         <div class="container-fluid mt-5">
           <div class="row" >
             <div class="col-lg-6 d-flex " data-aos="zoom-out" data-aos-delay="200">
-              <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
+              <img src="{% static 'img/sideBanner/features-3.png' %}" class="img-fluid animated" alt="">
             </div>
             <div class="col-lg-6 p-4 " data-aos="zoom-out" data-aos-delay="200">
               <h1>SEO</h1>
@@ -668,7 +695,7 @@ p{
     <!-- End Services Section -->
  <!-- ======= project Section ======= -->
  <main id="main">
-  <section id="about" class="about">
+  <section id="about" class="about mt-5">
 
     <div class="container" data-aos="fade-up">
       <div class="row gx-0">
@@ -715,6 +742,7 @@ p{
   </section>
   <!-- End About Section -->
 </main>
+
 
 <div class="mt-5" style="background-color:#DF9926; color:white;">
   <div class="row">
