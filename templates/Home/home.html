@@ -305,6 +305,57 @@ p{
   font-size: 70px;
 }
 
+.blob{
+  width: 300px;
+  height:900px;
+ 
+  background-size: cover;
+  animation: animation 5s linear infinite;
+  border: 4px solid orangered;
+
+}
+
+@keyframes animation{
+  0%, 100%{
+    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+  }
+  25% {
+    border-radius:73% 27% 26% 38% / 73% 36% 64% 27%;
+
+  }
+  50% {
+    border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%;
+
+  }
+  75% {
+    border-radius: 40% 60% 70% 30% / 47% 62% 38% 53% ;
+
+  }
+}
+@media (min-width: 1024px) {
+  .blob {
+    width: 500px;
+    height:500px;
+  }
+}
+
+@media (max-height: 768px) {
+  .blob {
+    width: 600px;
+    height:500px;
+  }
+}
+@media (max-height: 414px) {
+  .blob {
+    width: 350;
+    height:300px;
+  }
+}
+.team-section{
+  background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(static/img/glob4.jpg);
+  color:white;
+  
+}
 
 </style>
 {% endblock css %}
@@ -389,8 +440,6 @@ p{
     <h1 class="text">Parallax</h1>
   </div> -->
 
-
-
     <div id="about" class="paddsection">
       <div class="container">
       <div class="row justify-content-between">
@@ -416,94 +465,6 @@ p{
     </div>
   </div>
   
-  <!-- ======= About Section ======= -->
-  <!-- <div>
-    <div class="row" data-aos="fade-up">
-      <div class="col-lg-6 section-about p-5  ">
-        <div class="ml-5 mt-4">
-
-          <h2>About <span class="text-warning">T</span>ech<span style="color:blue">M</span>elba</h2>
-          <p>
-            Quisquam vel nam ipsum tenetur suscipit voluptatum nam et est corrupti.
-            Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit volu
-
-          <div class="row">
-            <div class="col-md-6 p-4">
-              <hr style="color:white; border: 0.5px solid rgb(253, 253, 253);">
-              <p>Quisquam vel nam ipsum tenetur suscipit voluptatum nam et est corrupti.</p>
-              <ul>
-                <li>Web Design</li>
-                <li>Web Design</li>
-                <li>Web Design</li>
-                <li>Web Design</li>
-                <li>Web Design</li>
-              </ul>
-            </div>
-            <div class="col-md-6 p-4">
-              <hr style="color:white; border: 1px solid rgb(253, 253, 253);">
-              <p>Quisquam vel nam ipsum tenetur suscipit voluptatum nam et est corrupti.</p>
-              <ul>
-                <li>Web Design</li>
-                <li>Web Design</li>
-                <li>Web Design</li>
-                <li>Web Design</li>
-                <li>Web Design</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="text-lg-start">
-            <a href="#0" class="button12">
-              <em> </em>   
-              <span>
-                Our Journey
-                </span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 ">
-        <img src="{% static 'img/about.jpg' %}"  class=" img-fluid animated justify-content-center align-items-center text-center mt-5" alt="">
-      </div>
-    </div>
-  </div> -->
-
-  <!-- <main id="main">
-    <section id="about" class="about">
-
-      <div class="container-fluid" data-aos="fade-up">
-        <div class="row gx-0">
-
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h1>About Us</h1>
-              <h6>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h6>
-              <p>
-                Quisquam vel nam ipsum tenetur suscipit voluptatum nam et est corrupti.
-                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit volu<br><br> dolores aperiam. Sed deserunt et. Inventore et et doipit voluptatum nam et est corrupti.
-              </p>
-              <div class="text-lg-start">
-                <a href="#0" class="button12">
-                  <em> </em>   
-                   <span>
-                     Find Out More
-                     </span>
-                 </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{% static 'img/about.jpg' %}" class="img-fluid " alt="">
-          </div>
-
-        </div>
-      </div>
-    </section>
-  </main> -->
-  <!-- End About Section -->
-
       <!-- ======= Counts Section ======= -->
       <section id="counter" class="counter">
         <div class="container" data-aos="fade-up">
@@ -554,11 +515,11 @@ p{
       </section>
       <!-- End Counts Section -->
 
-      <section class="development bg-warning">
-        <div class="container-fluid mt-5">
+      <section class="development ">
+        <div class="container mt-5">
           <div class="row" >
             <div class="col-lg-6 d-flex " data-aos="zoom-out" data-aos-delay="200">
-              <img src="{% static 'img/sideBanner/features-2.png' %}" class="img-fluid animated " alt="">
+              <img src="{% static 'img/sideBanner/features-2.png' %}" class="img-fluid blob   " alt="">
             </div>
             <div class="col-lg-6 p-4 " data-aos="zoom-out" data-aos-delay="200">
               <h1>Web Development</h1>
@@ -574,8 +535,8 @@ p{
         </div>
       </section>
 
-      <section class="graphics  bg-success">
-        <div class="container-fluid mt-5">
+      <section class="graphics">
+        <div class="container mt-5">
           <div class="row" >
             <div class="col-lg-6  p-4" data-aos="zoom-out" data-aos-delay="200">
               <h1>Graphics Design</h1>
@@ -587,18 +548,19 @@ p{
                    </span>
                </a>
             </div>
-            <div class="col-lg-6  " data-aos="zoom-out" data-aos-delay="200">
-              <img src="{% static 'img/sideBanner/features.png' %}" class="img-fluid animated" alt="">
+            <div class="col-lg-6 d-flex  " data-aos="zoom-out" data-aos-delay="200">
+              <img src="{% static 'img/tr.jpg' %}" class="img-fluid blob " alt="">
+              <!-- <img src="{% static 'img/sideBanner/features.png' %}" class="img-fluid  blob " alt=""> -->
             </div>
           </div>
         </div>
       </section>
 
-      <section class="seo  bg-seo">
-        <div class="container-fluid mt-5">
+      <section class="seo">
+        <div class="container mt-5">
           <div class="row" >
-            <div class="col-lg-6 d-flex " data-aos="zoom-out" data-aos-delay="200">
-              <img src="{% static 'img/sideBanner/features-3.png' %}" class="img-fluid animated" alt="">
+            <div class="col-lg-6 d-flex  " data-aos="zoom-out" data-aos-delay="200">
+              <img src="{% static 'img/sideBanner/features-3.png' %}" class="img-fluid blob " alt="">
             </div>
             <div class="col-lg-6 p-4 " data-aos="zoom-out" data-aos-delay="200">
               <h1>SEO</h1>
@@ -744,6 +706,18 @@ p{
 </main>
 
 
+<!-- team member section  -->
+<!-- <div class="container-fluid team-section">
+  <div>
+    <h1>Hello</h1>
+  </div>
+
+
+  
+</div> -->
+<!-- team member section  -->
+
+
 <div class="mt-5" style="background-color:#DF9926; color:white;">
   <div class="row">
     <div class="col-lg-6 p-5 mt-5">
@@ -768,11 +742,10 @@ p{
 
 
 
+
 {% endblock body %}
 
 {% block script %}
-
-
-
-
+<script>
+</script>
 {% endblock script %}

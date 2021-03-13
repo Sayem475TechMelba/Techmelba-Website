@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import View
+from django.contrib import messages
 
 # Create your views here.
 
@@ -14,6 +15,23 @@ class About(View):
 class Contact(View):
     def get(self, request):
         return render(request, 'Home/contact.html')
+
+    def post(self, request):
+        name = request.POST['name']
+        image = request.POST['image']
+        contact = request.POST['contact']
+        message = request.POST['message']
+
+        cont = ContactUs(
+            name=name,
+            image=image,
+            contact = contact,
+            message = message
+        )
+        cont.save()
+        messages.success(request, 'You message has been sent!')
+        return render(request, 'Home/contact.html')
+
 
 class Projects(View):
     def get(self, request):

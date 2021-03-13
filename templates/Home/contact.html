@@ -5,10 +5,149 @@
 
 {% block css %}
 <style>
+    .heading.heading--style-2 .heading__pre-title::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 2px;
+        width: 30px;
+        margin-right: 10px;
+        margin-bottom: 3px;
+        background: #fdd340;
+        position: relative;
+    }
+    .mt-10{
+        margin-top: 10rem;
+    }
+    .mb-10{
+        margin-bottom: 10rem;
+    }
+    .p-10{
+        padding:3rem;
+    }
+    .bg-orange{
+        padding: 1rem;
+    }
+    .form-bg{
+        background: #101522;
+        border:1px dotted rgb(26, 18, 48);
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    .form-control {
+        background-color:rgb(216, 212, 212);
+        border-radius: 4px;
+      }
+      .btn-bg{
+          background:yellow;
+      }
+      .btn-bg:hover{
+          background:rgb(13, 52, 104);
+          color: white;
+      }
+      .btn{
+          border-radius: 50px;
+      }
+      .head-title{
+          font-weight: bold;
+      }
+      .map-container-3{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+        }
+        .map-container-3 iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+        }
+    
 </style>
 {% endblock css %}
 
 {% block body %}
+<!-- OUR BANNER IMAGE WITH TITLE WILL START HERE  -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="second-slide" src="https://source.unsplash.com/1900x420/?contact" alt="Second slide"> 
+        <!-- <img class="second-slide" src="{% static 'assets/img/banner/banner.jpg' %}" alt="Second slide"> -->
+        <div class="container">
+          <div class="carousel-caption  text-center bg-text" style="padding-bottom:160px;">
+            <h1> Contact us for your query.</h1>
+            <!-- <p class="slide-p">Intellect Wealth, partnering with advisers to support more Australians
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- OUR BANNER IMAGE WITH TITLE ENDS HERE  -->
+<div class="container mt-10 mb-10">
+    <div class="row">
+        <div class="col-lg-3 bg-orange">
+            <h2 class="head-title">
+                Contact</h2>
+            <h6 style="color: orangered;"><i class="icofont-location-pin" style="color: rgb(13, 52, 104)"></i>&nbsp; LOCATION</h6>
+            <p class="mt-0 ">205 Fida Walinton, Tongo
+                New York, Canada</p>
+            <h6 style="color: orangered;"><i class="icofont-phone" style="color: rgb(13, 52, 104)"> </i>&nbsp;  CALL US</h6>
+            <p class="mt-0 ">987-0986-0987</p>
+            <h6 style="color:orangered;"><i class="icofont-email" style="color: rgb(13, 52, 104)"></i>&nbsp;  MAIL US</h6>
+            <p class="mt-0 ">support@huruma.com</p>
+
+        </div>
+        <div class="col-lg-7 ml-3 p-4 form-bg  text-white">
+            <h3>Let's Talk</h3>
+            <p class="mt-0">
+                Contact us to get, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ainim veniam.
+            </p>
+
+            <form class="mt-4" method="POST">
+              {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="text" name='name' class="form-control" id="name"  placeholder=" Name" required>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <input type="phone" name='contact' class="form-control" id="phone" placeholder="Phone" required >
+                    </div>
+
+                  <div class="form-group col-md-12">
+                    <input type="email" name='email' class="form-control" id="email" placeholder="Email" required >
+                  </div>
+
+                  <!-- <div class="form-group col-md-6">
+                    <input type="phone" name='user_contact' class="form-control" id="phone" placeholder="Contact No." required>
+                  </div> -->
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control s" name="message" id="message" rows="3" placeholder="Message" required></textarea>
+
+                </div>
+               
+                
+                <button type="submit" class="btn btn-bg">Contact Us</button>
+              </form>
+
+        </div>
+    </div>
+</div>
+ <!-- OFFICE LOCATION  -->
+ <div class=" mt-6">
+    <div class="row text-center">
+        <div class="col-md-12">
+             <!-- OFFICE LOCATION MAP  -->
+             <div class="z-depth-1-half map-container-3" id="map-container-google-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.102053890993!2d89.28492911502038!3d25.734138483649303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e32c35a776a9c9%3A0x29fc1489b64b8fe9!2z4Ka44Ka-4Kak4Kau4Ka-4Kal4Ka-LCBSYW5ncHVyIDU0MDA!5e0!3m2!1sen!2sbd!4v1614078810433!5m2!1sen!2sbd"  frameborder="0" style="border:0;" tabindex="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock body %}
 
 {% block script %}
