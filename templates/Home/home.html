@@ -5,357 +5,6 @@
 
 {% block css %}
 <style>
-  .header{
-    background:url("../img/hero-bg.jpg") center center no-repeat;
-  }
-  #hero {
-    width: 100%;
-    height: 100vh;
-    /*background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("static/img/glob2.jpg") center center no-repeat;*/
-    background: linear-gradient(45deg, rgba(24, 24, 26, 0.9) 0%, rgba(12, 12, 12, 0.9) 100%), url("static/img/glob2.jpg") center center no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    position:relative;
-  }
-  section .wave{
-    position:absolute;
-    width:100%;
-    height: 143px;
-    bottom:0;
-    left:0;
-    background: url(static/img/wave.png);
-    animation: animate 10s linear infinite;
-  }
-  section .wave:before{
-    content: '';
-    width:100%;
-    height: 143px;
-    background: url(static/img/wave.png);
-    animation: animate 10s linear infinite;
-    position:absolute;
-    left:0;
-    top:0;
-    opacity: 0.4;
-    animation-delay: -5s;
-    animation: animate-reverse 10s linear infinite;
-  }
-  section .wave:after{
-    content: '';
-    width:100%;
-    height: 143px;
-    background: url(static/img/wave.png);
-    animation: animate 10s linear infinite;
-    position:absolute;
-    left:0;
-    top:0;
-    opacity: 0.6;
-    animation-delay: -5s;
-    animation: animate 20s linear infinite;
-  }
- 
-   @keyframes animate {
-    0%{
-      background-position: 0;
-    }
-    100%{
-      background-position: 1360px;
-    }
-    
-  }
-  @keyframes animate-reverse {
-    0%{
-      background-position: 1360px;
-    }
-    100%{
-      background-position: 0;
-    }
-    
-  }
-  .img{
-    height: 100%;
-    width: 150%;
-  }
-  #particles-js{ 
-    position:relative;
-    z-index:2;
-    }
-  canvas.particles-js-canvas-el {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index:1;
-      width: 100%;
-      height: 100%;
-  }
-  #services .icon-boxes {
-    margin-top: 100px;
-  }
-  
-  #services .icon-box {
-    padding: 50px 30px;
-    position: relative;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
-    transition: all 0.3s ease-in-out;
-    border-radius: 8px;
-    z-index: 1;
-    color:white;
-    background:linear-gradient(to right,  #040400 0%,#0c2138  10%); 
-  }
-  
-  #services .icon-box .title {
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
-  
-  #services .icon-box .title a {
-    color: #eff5fa;
-    transition: 0.3s;
-  }
-  
-  #services .icon-box .description {
-    font-size: 15px;
-    line-height: 28px;
-    margin-bottom: 0;
-  }
-  
-  #services .icon-box .icon {
-    margin-bottom: 20px;
-    padding-top: 10px;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-    font-size: 36px;
-    line-height: 1;
-    color: #2487ce;
-  }
-  
-  #services .icon-box:hover {
-    transform: scale(1.08);
-  }
-  
-  #services .icon-box:hover .title a {
-    color: #2487ce;
-  }
-  
-  @media (min-width: 1024px) {
-    #about {
-      background-attachment: fixed;
-    }
-  }
-  
-  @media (max-height: 800px) {
-    #services {
-      height: auto;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    #services {
-      height: auto;
-    }
-    #services h1 {
-      font-size: 28px;
-      line-height: 36px;
-    }
-    #services h2 {
-      font-size: 18px;
-      line-height: 24px;
-    }
-  }
-  /*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
-.counter {
-  padding: 70px 0 60px;
-}
-
-.counter .count-box {
-  display: flex;
-  align-items: center;
-  padding: 30px;
-  width: 100%;
-  background: #fff;
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
-}
-
-.counter .count-box i {
-  font-size: 42px;
-  line-height: 0;
-  margin-right: 20px;
-  color: #4154f1;
-}
-
-.counter .count-box span {
-  font-size: 36px;
-  display: block;
-  font-weight: 600;
-  color: #0b198f;
-}
-
-.counter .count-box p {
-  padding: 0;
-  margin: 0;
-  font-family: "Nunito", sans-serif;
-  font-size: 14px;
-}
-
-
-
-  /*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
-
-#about {
-  width: 100%;
-  height: auto;
-  background: #f7f7f7;
-  padding-top: 120px;
-}
-
-#about .div-img-bg {
-  padding-bottom: 30px;
-  border: 20px solid #b8a07e;
-}
-
-#about .div-img-bg .about-img img {
-  width: 100%;
-  box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
-  margin-top: -60px;
-  margin-left: 40px;
-  height: 400px;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-#about .about-descr .p-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  text-align: left;
-}
-
-#about .about-descr .separator {
-  max-width: 80%;
-  margin-bottom: 0;
-  text-align: left;
-}
-
-
-.animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
-}
-
-.about-head{
-  font-size: 36px;
-  font-weight: 1000;
-}
-.text-small{
-  font-size:13px;
-}
-
-.title h1{
-	text-align: center;
-	color: #FFF;
-}
-
-
-.title{
-	text-align: center;
-}
-h1{
-	font-size: 6vw;
-	line-height: 1.125;
-	font-family: 'Sansita';
-	text-transform: uppercase;
-}
-h2{
-  font-size: 3vw;
-	line-height: 1.125;
-	font-family: 'Sansita';
-	text-transform: uppercase;
-}
-
-p{
-	line-height: 1;
-  letter-spacing:1px;
-	font-family: 'Poppins';
-}
-.bg-seo{
-  background:  #e9eae9;
-}
-#parallax {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position: 50% 50%;
-}
-.text {
-  position: absolute;
-  top: 47%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-family: "Arial";
-  text-transform: uppercase;
-  opacity: .2;
-  font-size: 70px;
-}
-
-.blob{
-  width: 300px;
-  height:900px;
- 
-  background-size: cover;
-  animation: animation 5s linear infinite;
-  border: 4px solid orangered;
-
-}
-
-@keyframes animation{
-  0%, 100%{
-    border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
-  }
-  25% {
-    border-radius:73% 27% 26% 38% / 73% 36% 64% 27%;
-
-  }
-  50% {
-    border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%;
-
-  }
-  75% {
-    border-radius: 40% 60% 70% 30% / 47% 62% 38% 53% ;
-
-  }
-}
-@media (min-width: 1024px) {
-  .blob {
-    width: 500px;
-    height:500px;
-  }
-}
-
-@media (max-height: 768px) {
-  .blob {
-    width: 600px;
-    height:500px;
-  }
-}
-@media (max-height: 414px) {
-  .blob {
-    width: 350;
-    height:300px;
-  }
-}
-.team-section{
-  background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(static/img/glob4.jpg);
-  color:white;
-  
-}
 
 </style>
 {% endblock css %}
@@ -706,17 +355,159 @@ p{
 </main>
 
 
-<!-- team member section  -->
-<!-- <div class="container-fluid team-section">
-  <div>
-    <h1>Hello</h1>
+<!-- why choose us section  -->
+<section id="choose" class="choose">
+  <div class="container">
+    <div class="container">
+      <div class="text-center" data-aos="zoom-in">
+        <img src="{% static 'img/banner/rob3.png' %}"  class="img-fluid animated" style="position: absolute;" alt="">
+        <h1 style="position:relative;">Why Choose Us?</h1>
+        <p style="position:relative;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate rerum iste aperiam itaque alias ad, quo ex commodi, optio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt consequatur suscipit, tempora ipsam iste reprehenderit quasi atque ad ratione aspernatur laboriosam praesentium iusto doloremque consequuntur commodi in veritatis dolorum voluptates.<br><br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi consequuntur blanditiis quam eaque debitis itaque doloribus id alias repudiandae at quis autem, illo necessitatibus voluptatem accusamus rem odio praesentium expedita.
+        </p>
+      </div>
+    </div>
   </div>
+</section>
+<!-- why choose us section  -->
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials  mt-5">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>SUCCESS STORY</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius cons quas.</p>
+      </div>
+
+      <div class="owl-carousel testimonials-carousel">
+
+        <div class="testimonial-item">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="{% static 'img/team/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+          <h3>Saul Goodman</h3>
+          <h4>Ceo &amp; Founder</h4>
+        </div>
+
+        <div class="testimonial-item">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="{% static 'img/team/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+          <h3>Sara Wilsson</h3>
+          <h4>Designer</h4>
+        </div>
+
+        <div class="testimonial-item">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="{% static 'img/team/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+          <h3>Jena Karlis</h3>
+          <h4>Store Owner</h4>
+        </div>
+
+        <div class="testimonial-item">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="{% static 'img/team/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+          <h3>Matt Brandon</h3>
+          <h4>Freelancer</h4>
+        </div>
+
+        <div class="testimonial-item">
+          <p>
+            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+          </p>
+          <img src="{% static 'img/team/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+          <h3>John Larson</h3>
+          <h4>Entrepreneur</h4>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- End Testimonials Section -->
 
 
-  
-</div> -->
-<!-- team member section  -->
+  <!-- Our clients section  -->
+    <!-- ======= Supporters Section ======= -->
+    <section id="supporters" class="section-with-bg">
 
+      <div class="container" data-aos="fade-up">
+        <div class="section-header text-center">
+          <h2>Our Clients</h2>
+        </div>
+
+        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{% static 'img/supporters/1.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{% static 'img/supporters/2.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{% static 'img/supporters/3.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{% static 'img/supporters/4.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{% static 'img/supporters/5.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{% static 'img/supporters/6.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{% static 'img/supporters/7.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="supporter-logo">
+              <img src="{% static 'img/supporters/8.png' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Sponsors Section -->
+  <!-- Our clients section  -->
 
 <div class="mt-5" style="background-color:#DF9926; color:white;">
   <div class="row">
@@ -739,8 +530,6 @@ p{
     </div>
   </div>
 </div>
-
-
 
 
 {% endblock body %}

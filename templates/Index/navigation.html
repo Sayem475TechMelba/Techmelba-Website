@@ -17,7 +17,7 @@
   .nav-effect:hover::after{
     height: calc(100% + 8px)
   }
-  .progress-container {
+/*  .progress-container {
     width: 100%;
     height: 8px;
     background: rgba(86, 58, 250, 0.9) , rgba(116, 15, 214, 0.9);
@@ -28,7 +28,7 @@
     border-radius: 30px;
     background: linear-gradient(to right, #000099 0%, #ffff00 100%);
     width: 0%;
-  }
+  }*/
  </style>
  
  
@@ -39,7 +39,8 @@
       <div class="row justify-content-center">
         <div class="col-xl-9 d-flex align-items-center">
           <!-- Uncomment below if you prefer to use an image logo -->
-          <a href="/" class="logo mr-auto"><img src="{% static 'img/techmelba/logo2.png' %}" alt="" class="img-fluid"></a>
+          <a href="/" class="logo mr-auto"><img src="{% static 'img/techmelba/logo2.png' %}" alt="" class="img-fluid 	.d-sm-none .d-md-block	 .d-none .d-md-block .d-lg-none "></a>
+          <!-- <a href="/" class="logo mr-auto"><img src="{% static 'img/techmelba/logo5.png' %}" alt="" class="img-fluid"></a> -->
 
           <nav class="nav-menu d-none d-lg-block">
             <ul>
@@ -74,9 +75,9 @@
         </div>
       </div>
       <!-- design of progressbar on scroll  -->
-      <div class="progress-container mt-1">
+      <!-- <div class="progress-container mt-1">
         <div class="progress-bar" id="myBar"></div>
-      </div>
+      </div> -->
 
     </div>
   </header><!-- End Header -->
