@@ -82,6 +82,10 @@
             width: 100%;
         }
     }
+ .sayem img{
+     filter:brightness(0.5);
+
+ }
 
     
 
@@ -89,17 +93,17 @@
 {% endblock css %}
 
 {% block body %}
+
 <!-- OUR BANNER IMAGE WITH TITLE WILL START HERE  -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-      	 <!-- <img class="second-slide" src="https://source.unsplash.com/1900x420/?company" alt="Second slide">  -->
-        <img class="second-slide" src="{% static 'img/banner/p3.jpg' %}" alt="Second slide">
+      <div class="carousel-item sayem active">
+      	 
+        <img class="second-slide " src="{% static 'img/banner/p3.jpg' %}" alt="Second slide">
         <div class="container">
           <div class="carousel-caption  text-center bg-text" style="padding-bottom:160px;">
             <h2>About Our Company</h2>
-            <!-- <p class="slide-p">Intellect Wealth, partnering with advisers to support more Australians
-            </p> -->
+            
           </div>
         </div>
       </div>
