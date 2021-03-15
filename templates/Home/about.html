@@ -5,10 +5,305 @@
 
 {% block css %}
 <style>
+  .heading.heading--style-2 .heading__pre-title::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 3px;
+        width: 40px;
+        margin-right: 10px;
+        margin-bottom: 3px;
+        background: #fdd340;
+        position: relative;
+    }
+    .line{
+        height: 25px; 
+        min-width: 100%;
+        margin: 0 auto 10px;
+        line-height: 25px;
+        font-size: 14px;
+        color: #fff;
+        padding: 0 0 0 10px;
+        position: relative;
+    }
+
+    .line:before{
+        content: '';
+        width: 100%;
+        position: absolute;
+        left: 0;
+        height: 25px;
+        top: 0;
+        z-index: -2;
+        background: #d2d6d7;
+    }
+
+    .line:after{
+        content: '';
+        background: #333;
+        height: 25px;
+        transition: 0.8s;
+        display: block;
+        width: 100%;
+        animation: animate 1 7s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .line1:after{
+        max-width: 90%;
+    }
+    .line2:after{
+        max-width: 80%;
+    }
+    .line3:after{
+        max-width: 85%;
+    }
+    .line4:after{
+        max-width: 95%;
+    }
+    .line5:after{
+        max-width: 88%;
+    }
+    .line6:after{
+        max-width: 92%;
+    }
+    .line7:after{
+        max-width: 82%;
+    }
+
+    @keyframes animate{
+        0%{
+            width: 0;
+        }
+        100%{
+            width: 100%;
+        }
+    }
+
+    .services .icon-box {
+    border: 2px dotted #e0deec;
+    text-align: center;
+    padding: 40px 20px;
+    transition: all ease-in-out 0.2s;
+    background: #fff;
+   
+  }
+  
+  .services .icon-box .icon {
+    border: 2px solid #e90800;
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: ease-in-out 0.3s;
+    color: #630000;
+  }
+  
+  .services .icon-box .icon i {
+    font-size: 28px;
+  }
+  
+  .services .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  .services .icon-box h4 a {
+    color: #36343a;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .services .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .services .icon-box:hover {
+    border-color: yellow;
+    box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+  
+  .services .icon-box:hover h4 a {
+    color: rgb(12, 12, 12);
+  }
+  
+  .services .icon-box:hover .icon {
+    color: rgb(10, 10, 10);
+    background: yellow;
+  }
+
 </style>
 {% endblock css %}
 
 {% block body %}
+<!-- OUR BANNER IMAGE WITH TITLE WILL START HERE  -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+      	 <img class="second-slide" src="https://source.unsplash.com/1900x420/?company" alt="Second slide"> 
+        <!-- <img class="second-slide" src="{% static 'assets/img/banner/banner.jpg' %}" alt="Second slide"> -->
+        <div class="container">
+          <div class="carousel-caption  text-center bg-text" style="padding-bottom:160px;">
+            <h1>About Our Company</h1>
+            <!-- <p class="slide-p">Intellect Wealth, partnering with advisers to support more Australians
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- OUR BANNER IMAGE WITH TITLE ENDS HERE  -->
+   
+   <div class="container mt-5 ">
+       <div class="row">
+           <div class="col-lg-6 col-md-12 col-sm-12 mt-6">
+              <img src="{% static 'img/team/blog-inside-post.jpg' %}" class="img-fluid" alt=" slide">
+           </div>
+           <div class="col-lg-6 col-md-12 col-sm-12 mt-4">
+            <div class="heading heading--primary heading--style-2" data-aos="fade-right"><span class="heading__pre-title ">Read about our company</span><br>
+                <h4 class="mt-3"><span>Some information</span><br> <span class="text-muted">Techmelba International</span></h4>
+            </div>
+            <p class="text-muted">
+                This tutorial / guide will give you a detailed overview of the criteria, method and schedule of company registration in Bangladesh, this is how to open an organization in Bangladesh. Bangladesh, like other jurisdictions, has a set of basic and consistent regulatory consent requirements for starting and conducting a business.<br><br>
+
+                Note that most Bangladeshi companies consider registering a new business or relocating your existing business to Bangladesh. Capital contributions are not liable for companies outside of that. Anyone over the age of 18 (foreign or local) can register a business in Bangladesh under the Companies Act 1994.
+            </p>
+           </div>
+       </div>
+   </div>
+   <div class="container mt-5 ">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 mt-6">
+           <h3 data-aos="fade-right">Why You Should Choose Us?</h3>
+           <p class="justify-content text-muted">
+            We have a dedicated team of Professional Designers, Developers, Digital Marketing Managers, 
+            SEO Specialists and Advertising Managers with over 6+ years of experience in various IT field.
+             We provide all services very cheap rate. We develop your website search engine optimization friendly. 
+             This is help ranking top of the first page all over competitor website. Your existing client will find easily.
+              We always use latest and modern technology develop your website. This technology you expected. 
+              We develop your website dynamically. You can control easily and edit any time without the programming language. 
+              We focus on your IT so you can focus on your business. IT Farm helps the sustainability and 
+              long term growth of your business by providing. Eurekh IT Farm globally invests in seed, start-up, 
+              and early stage companies, and help them on partnerships with Japanese enterprises. More Info About Us: Facebook. If you need any services, please feel free to call us 880 1701 333 511.
+           </p>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 ">
+
+            <div class="wrapper">
+                <h3 class="text-center " data-aos="fade-up">Our skills</h3>
+
+                <h6>HTML/CSS</h6>
+                <div class="line line1">90%</div>
+                <h6>Javascript</h6>
+                <div class="line line2">80%</div>
+                <h6>Django</h6>
+                <div class="line line3">85%</div>
+                <h6>Python</h6>
+                <div class="line line4">87%</div>
+                <h6>React Js</h6>
+                <div class="line line5">88%</div>
+                <h6>Bootstrap </h6>
+                <div class="line line6">92%</div>
+                <h6>Graphics Design</h6>
+                <div class="line line7">95%</div>
+
+            </div>
+         
+        </div>
+    </div>
+</div>
+
+<!-- ======= What we do Section ======= -->
+<section id="services" class="services section-bg mt-5">
+  <div class="heading heading--primary heading--style-2 text-center mb-4" data-aos="fade-right">
+    <span class="heading__pre-title "><h3>WHAT WE DO</h3> </span>
+    
+
+
+</div>
+    <div class="container  mb-4">
+
+          <div class="row">
+            <div class="col-md-3 d-flex align-items-stretch mb-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon"><i class="icofont-bag-alt"></i></div>
+                <h4><a href="/service">Digital Marketing</a></h4>
+                <p>We promote products by doing Digital Marketing. Digital Marketing increase business.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon"><i class="icofont-brand-designfloat"></i></div>
+                <h4><a href="/service">Graphic Design</a></h4>
+                <p>We are Graphic Design agency specializing in branding, You’ll receive intelligent work for brand.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon"><i class="icofont-laptop"></i></div>
+                <h4><a href="/service">Web Design & Development</a></h4>
+                <p>We are extreme for web design and development by following latest technology.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon"><i class="icofont-people"></i></div>
+                <h4><a href="/service">IT Training</a></h4>
+                <p> Eurekha monitors the IT training marketplace looking for the best providers of IT Training .</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon"><i class="icofont-book-alt"></i></div>
+                <h4><a href="/service">Web Hosting</a></h4>
+                <p>Powerful Web Hosting Easy to use Control Panel. Expert hosting support available 24.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon"><i class="icofont-world"></i></div>
+                <h4><a href="/service">Domain Registration</a></h4>
+                <p> We’d love to be your new domain registrar. You can buy domain name at lowest price.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon"><i class="icofont-ui-settings"></i></div>
+                <h4><a href="/service">Software Development</a></h4>
+                <p> We Develop Software that is fast, reliable, We work for our clients according to their budget.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon"><i class="icofont-search-2"></i></div>
+                <h4><a href="/service">Search Engine Optimization (SEO)</a></h4>
+                <p> SEO improve the website visitors as well as the sales and business to the company.</p>
+              </div>
+            </div>
+
+         
+        </div>
+      
+    </div>
+  </section>
+
 {% endblock body %}
 {% block script %}
   
