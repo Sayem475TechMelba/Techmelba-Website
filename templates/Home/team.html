@@ -5,7 +5,17 @@
 
 {% block css %}
 <style>
-    
+    .heading.heading--style-2 .heading__pre-title::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 3px;
+        width: 40px;
+        margin-right: 10px;
+        margin-bottom: 3px;
+        background: purple;
+        position: relative;
+    }
    
     /*--------------------------------------------------------------
 # Team
@@ -114,11 +124,11 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <!-- <img class="second-slide" src="https://source.unsplash.com/1900x420/?team, team member" alt="Second slide">  -->
-        <img class="second-slide" src="{% static 'img/banner/ex1.jpg' %}" alt="Second slide">
+        <!-- <img class="second-slide" src="https://source.unsplash.com/1900x420/?hacker, programmer" alt="Second slide">  -->
+        <img class="second-slide" src="{% static 'img/banner/t1.jpg' %}" alt="Second slide">
         <div class="container">
           <div class="carousel-caption  text-center bg-text" style="padding-bottom:160px;">
-            <h1> Our team member</h1>
+            <h2> Our team members</h2>
             <!-- <p class="slide-p">Intellect Wealth, partnering with advisers to support more Australians
             </p> -->
           </div>
@@ -133,9 +143,13 @@
 
     <div class="container" data-aos="fade-up">
 
-      <header class="section-header text-center mb-5">
-        <h1>Leading Team</h1>
-      </header>
+      <div class="heading heading--primary heading--style-2 text-center  mb-5" data-aos="fade-right">
+        <span class="heading__pre-title "><h2 class="text-dark">Talented people make things smarter.</h2> </span>
+     </div>
+
+      <!-- <header class="section-header text-center mb-5">
+        <h1 class="text-dark">Leading Team</h1>
+      </header> -->
 
       <div class="row gy-4">
 
