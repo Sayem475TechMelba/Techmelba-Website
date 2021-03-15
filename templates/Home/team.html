@@ -21,7 +21,7 @@
 # Team
 --------------------------------------------------------------*/
 .team {
-    background: #fff;
+    background: #0f1b39;
     padding: 60px 0;
   }
   
@@ -78,6 +78,10 @@
   .team .member .social i {
     font-size: 18px;
   }
+  .team .member .social i:hover {
+    font-size: 18px;
+    color: #000000;
+  }
   
   .team .member .member-info {
     padding: 10px 15px 20px 15px;
@@ -124,13 +128,11 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <!-- <img class="second-slide" src="https://source.unsplash.com/1900x420/?hacker, programmer" alt="Second slide">  -->
         <img class="second-slide" src="{% static 'img/banner/t1.jpg' %}" alt="Second slide">
         <div class="container">
           <div class="carousel-caption  text-center bg-text" style="padding-bottom:160px;">
             <h2> Our team members</h2>
-            <!-- <p class="slide-p">Intellect Wealth, partnering with advisers to support more Australians
-            </p> -->
+           
           </div>
         </div>
       </div>
@@ -144,12 +146,8 @@
     <div class="container" data-aos="fade-up">
 
       <div class="heading heading--primary heading--style-2 text-center  mb-5" data-aos="fade-right">
-        <span class="heading__pre-title "><h2 class="text-dark">Talented people make things smarter.</h2> </span>
+        <span class="heading__pre-title "><h2>Talented people make things smarter.</h2> </span>
      </div>
-
-      <!-- <header class="section-header text-center mb-5">
-        <h1 class="text-dark">Leading Team</h1>
-      </header> -->
 
       <div class="row gy-4">
 
@@ -158,7 +156,7 @@
             <div class="member-img">
               <img src="{% static 'img/team/testimonials-3.jpg' %}" class="img-fluid" alt="">
               <div class="social">
-                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+              <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
               <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
               <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
               <a href="#" class="google-plus"><i class="icofont-google-plus"></i></a>
