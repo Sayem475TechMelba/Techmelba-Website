@@ -13,7 +13,7 @@
         width: 40px;
         margin-right: 10px;
         margin-bottom: 3px;
-        background: #fdd340;
+        background: purple;
         position: relative;
     }
     .line{
@@ -83,64 +83,7 @@
         }
     }
 
-    .services1 .icon-box1 {
-    border: 2px dotted #e0deec;
-    text-align: center;
-    padding: 40px 20px;
-    transition: all ease-in-out 0.2s;
-    background: #000000;
-   
-  }
-  
-  .services1 .icon-box1 .icon1 {
-    border: 2px solid #e90800;
-    margin: 0 auto;
-    width: 64px;
-    height: 64px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    transition: ease-in-out 0.3s;
-    color: #630000;
-  }
-  
-  .services1 .icon-box1 .icon1 i {
-    font-size: 28px;
-  }
-  
-  .services1 .icon-box1 h4 {
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 24px;
-  }
-  
-  .services1 .icon-box1 h4 a {
-    color: #ffffff;
-    transition: ease-in-out 0.3s;
-  }
-  
-  .services1 .icon-box1 p {
-    line-height: 24px;
-    font-size: 14px;
-    margin-bottom: 0;
-  }
-  
-  .services1 .icon-box1:hover {
-    border-color: red;
-    box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
-  }
-  
-  .services1 .icon-box1:hover h4 a {
-    color: rgb(236, 232, 232);
-  }
-  
-  .services1 .icon-box1:hover .icon1 {
-    color: rgb(255, 250, 250);
-    background: rgb(240, 6, 6);
-  }
+    
 
 </style>
 {% endblock css %}
@@ -150,11 +93,11 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-      	 <img class="second-slide" src="https://source.unsplash.com/1900x420/?company" alt="Second slide"> 
-        <!-- <img class="second-slide" src="{% static 'assets/img/banner/banner.jpg' %}" alt="Second slide"> -->
+      	 <!-- <img class="second-slide" src="https://source.unsplash.com/1900x420/?company" alt="Second slide">  -->
+        <img class="second-slide" src="{% static 'img/banner/p3.jpg' %}" alt="Second slide">
         <div class="container">
           <div class="carousel-caption  text-center bg-text" style="padding-bottom:160px;">
-            <h1>About Our Company</h1>
+            <h2>About Our Company</h2>
             <!-- <p class="slide-p">Intellect Wealth, partnering with advisers to support more Australians
             </p> -->
           </div>
@@ -181,7 +124,7 @@
            </div>
        </div>
    </div>
-   <div class="container mt-5 ">
+   <div class="container mt-5 mb-4">
     <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12 mt-6">
            <h3 data-aos="fade-right">Why You Should Choose Us?</h3>
@@ -223,86 +166,6 @@
     </div>
 </div>
 
-<!-- ======= What we do Section ======= -->
-<section id="services" class="services1  mt-5">
-  <div class="heading heading--primary heading--style-2 text-center mb-4" data-aos="fade-right">
-    <span class="heading__pre-title "><h3>WHAT WE DO</h3> </span>
-    
-
-
-</div>
-    <div class="container  mb-4">
-
-          <div class="row">
-            <div class="col-md-3 d-flex align-items-stretch mb-4">
-              <div class="icon-box1" data-aos="zoom-in" data-aos-delay="100">
-                <div class="icon1"><i class="icofont-bag-alt"></i></div>
-                <h4><a href="/service">Digital Marketing</a></h4>
-                <p>We promote products by doing Digital Marketing. Digital Marketing increase business.</p>
-              </div>
-            </div>
-
-            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
-              <div class="icon-box1" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon1"><i class="icofont-brand-designfloat"></i></div>
-                <h4><a href="/service">Graphic Design</a></h4>
-                <p>We are Graphic Design agency specializing in branding, You’ll receive intelligent work for brand.</p>
-              </div>
-            </div>
-
-            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
-              <div class="icon-box1" data-aos="zoom-in" data-aos-delay="300">
-                <div class="icon1"><i class="icofont-laptop"></i></div>
-                <h4><a href="/service">Web Design & Development</a></h4>
-                <p>We are extreme for web design and development by following latest technology.</p>
-              </div>
-            </div>
-
-            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
-              <div class="icon-box1" data-aos="zoom-in" data-aos-delay="400">
-                <div class="icon1"><i class="icofont-people"></i></div>
-                <h4><a href="/service">IT Training</a></h4>
-                <p> Techmelba monitors the IT training marketplace looking for the best providers of IT Training .</p>
-              </div>
-            </div>
-
-            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
-              <div class="icon-box1" data-aos="zoom-in" data-aos-delay="400">
-                <div class="icon1"><i class="icofont-book-alt"></i></div>
-                <h4><a href="/service">Web Hosting</a></h4>
-                <p>Powerful Web Hosting Easy to use Control Panel. Expert hosting support available 24.</p>
-              </div>
-            </div>
-
-            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
-              <div class="icon-box1" data-aos="zoom-in" data-aos-delay="400">
-                <div class="icon1"><i class="icofont-world"></i></div>
-                <h4><a href="/service">Domain Registration</a></h4>
-                <p> We’d love to be your new domain registrar. You can buy domain name at lowest price.</p>
-              </div>
-            </div>
-
-            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
-              <div class="icon-box1" data-aos="zoom-in" data-aos-delay="400">
-                <div class="icon1"><i class="icofont-ui-settings"></i></div>
-                <h4><a href="/service">Software Development</a></h4>
-                <p> We Develop Software that is fast, reliable, We work for our clients according to their budget.</p>
-              </div>
-            </div>
-
-            <div class="col-md-3 d-flex align-items-stretch mb-4 ">
-              <div class="icon-box1" data-aos="zoom-in" data-aos-delay="400">
-                <div class="icon1"><i class="icofont-search-2"></i></div>
-                <h4><a href="/service">Search Engine Optimization (SEO)</a></h4>
-                <p> SEO improve the website visitors as well as the sales and business to the company.</p>
-              </div>
-            </div>
-
-         
-        </div>
-      
-    </div>
-  </section>
 
 {% endblock body %}
 {% block script %}
