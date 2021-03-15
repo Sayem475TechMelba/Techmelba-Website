@@ -87,8 +87,22 @@
 
  }
 
-    
+ .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
 
+  }
+  .zoom {
+ 
+ transition: transform .3s; /* Animation */
+ 
+ margin: 0 auto;
+}
+
+.zoom:hover {
+    box-shadow: 0px 0 25px 0 rgba(252, 252, 252, 0.2);
+    transform: scale(1.1); 
+
+}
 </style>
 {% endblock css %}
 
@@ -149,20 +163,20 @@
             <div class="wrapper">
                 <h3 class="text-center " data-aos="fade-up">Our skills</h3>
 
-                <h6>HTML/CSS</h6>
-                <div class="line line1">90%</div>
-                <h6>Javascript</h6>
-                <div class="line line2">80%</div>
-                <h6>Django</h6>
-                <div class="line line3">85%</div>
-                <h6>Python</h6>
-                <div class="line line4">87%</div>
-                <h6>React Js</h6>
-                <div class="line line5">88%</div>
-                <h6>Bootstrap </h6>
-                <div class="line line6">92%</div>
-                <h6>Graphics Design</h6>
-                <div class="line line7">95%</div>
+                <h6 data-aos="fade-up">HTML/CSS</h6>
+                <div data-aos="fade-up" class="line line1">90%</div>
+                <h6 data-aos="fade-up">Javascript</h6>
+                <div data-aos="fade-up" class="line line2">80%</div>
+                <h6  data-aos="fade-up">Django</h6>
+                <div data-aos="fade-up" class="line line3">85%</div>
+                <h6 data-aos="fade-up">Python</h6>
+                <div data-aos="fade-up" class="line line4">87%</div>
+                <h6 data-aos="fade-up">React Js</h6>
+                <div data-aos="fade-up" class="line line5">88%</div>
+                <h6 data-aos="fade-up">Bootstrap </h6>
+                <div data-aos="fade-up" class="line line6">92%</div>
+                <h6  data-aos="fade-up">Graphics Design</h6>
+                <div data-aos="fade-up" class="line line7">95%</div>
 
             </div>
          
@@ -170,6 +184,46 @@
     </div>
 </div>
 
+<div class="container">
+    <div class="row mt-5 mb-4">
+        <div class="col-md-4 col-sm-12 mb-4" data-aos="zoom-in" >
+            <div class="card zoom" >
+                <div class="card-body " style="background: black;">
+                   <div class="mb-3 animated"><i class="icofont-architecture-alt icofont-3x"></i></div> 
+                  <h6 class="text-uppercase mb-2">OUR MISSION</h6>
+                  <p class="text-muted justify-content">To be the global leader in IT Services. Building on our technologies, competencies and customer interests, and creating value for our stakeholders and customers. We’ll achieve this by focusing on the intersection of our client’s emerging needs and the acceleration of business and technological change.</p>
+                  
+                </div>
+              </div>
+
+        </div>
+
+        <div class="col-md-4 col-sm-12 mb-4" data-aos="zoom-in" >
+            <div class="card zoom" >
+                <div class="card-body " style="background: black;">
+                   <div class="mb-3 animated"><i class="icofont-racing-flag-alt icofont-3x"></i></div> 
+                  <h6 class="text-uppercase mb-2">OUR VALUES</h6>
+                  <p class="text-muted justify-content">To be the global leader in IT Services. Building on our technologies, competencies and customer interests, and creating value for our stakeholders and customers. We’ll achieve this by focusing on the intersection of our client’s emerging needs and the acceleration of business and technological change.</p>
+                  
+                </div>
+              </div>
+
+        </div>
+
+        <div class="col-md-4 col-sm-12 mb-4" data-aos="zoom-in" >
+            <div class="card zoom" >
+                <div class="card-body " style="background: black;">
+                   <div class="mb-3 animated"><i class="icofont-database-add icofont-3x"></i></div> 
+                  <h6 class="text-uppercase mb-2">OUR APPROACH & CULTURE</h6>
+                  <p class="text-muted justify-content">To be the global leader in IT Services. Building on our technologies, competencies and customer interests, and creating value for our stakeholders and customers. We’ll achieve this by focusing on the intersection of our client’s emerging needs and the acceleration of business and technological change.</p>
+                  
+                </div>
+              </div>
+
+        </div>
+
+    </div>
+</div>
 
 {% endblock body %}
 {% block script %}
