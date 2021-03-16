@@ -81,82 +81,6 @@
   <!-- OVERVIEW OF OUR SERVICES  -->
 
 
-  <!-- ABOUT COMPANY  -->
-  <div id="about" class="paddsection">
-      <div class="container">
-      <div class="row justify-content-between">
-
-        <div class="col-lg-4 ">
-          <div class="div-img-bg">
-            <div class="about-img">
-              <img src="{% static 'img/team/testimonials-4.jpg' %}" class="img-responsive animated" alt="me">
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7">
-          <div class="about-descr mt-4">
-            <h2>ABOUT COMPANY</h2>
-            <p class="">TechMelba IT solution is a Australian based company which was organized by Md. Foyez Ahmed. </p>
-            <p class="separator">
-              TechMelba mostly work for Australia like developing websites, designing logo etc. We provide world-class services including Digital Marketing, Web design & Development, Mobile App Development, Graphic Design & Consulting. We are known as one of the best software companies in It World.<br>
-              We use trending programming language for web development like Python, Django, REACT JS.
-              <br><br>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ABOUT COMPANY  -->
-  
-
-  <!-- COUNTER SECTION PROJECTS, COUNTRIES, CLIENTS, TEAM MEMBERS  -->
-  <section id="counter" class="counter">
-        <div class="container" data-aos="fade-up">
-          {% for c in count %}
-          <div class="row gy-4">
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="icofont-slightly-smile animated" style="color:gold;"></i>
-                <div>
-                  <span data-purecounter-start="0" data-purecounter-end="{{c.clients}}" data-purecounter-duration="1" class="purecounter"></span>
-                  <p>Clients</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="icofont-handshake-deal animated" style="color: #c72d06;"></i>
-                <div>
-                  <span data-purecounter-start="0" data-purecounter-end="{{c.projects}}" data-purecounter-duration="1" class="purecounter"></span>
-                  <p>Projects</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="icofont-network-tower animated" style="color: #15be56;"></i>
-                <div>
-                  <span data-purecounter-start="0" data-purecounter-end="{{c.countries}}" data-purecounter-duration="1" class="purecounter"></span>
-                  <p>Countries</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="icofont-users-alt-5 animated" style="color: #9a09ee;"></i>
-                <div>
-                  <span data-purecounter-start="0" data-purecounter-end="{{c.members}}" data-purecounter-duration="1" class="purecounter"></span>
-                  <p>Team Members</p>
-                </div>
-              </div>
-            </div>
-          </div>
-       {% endfor %}
-        </div>
-  </section>
-  <!-- COUNTER SECTION PROJECTS, COUNTRIES, CLIENTS, TEAM MEMBERS  -->
 
 
   <!-- DETAILS SECTION OF OUR WEB DEVELOPMENT, DESIGN, SEO SECTION  -->
@@ -368,6 +292,86 @@
   </section>
   <!-- WHY CHOOSE US SECTION  -->
 
+
+
+    <!-- ABOUT COMPANY  -->
+    <div id="about" class="paddsection">
+      <div class="container">
+      <div class="row justify-content-between">
+
+        <div class="col-lg-4 ">
+          <div class="div-img-bg">
+            <div class="about-img">
+              <img src="{% static 'img/team/testimonials-4.jpg' %}" class="img-responsive animated" alt="me">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="about-descr mt-4">
+            <h2>ABOUT COMPANY</h2>
+            <p class="">TechMelba IT solution is a Australian based company which was organized by Md. Foyez Ahmed. </p>
+            <p class="separator">
+              TechMelba mostly work for Australia like developing websites, designing logo etc. We provide world-class services including Digital Marketing, Web design & Development, Mobile App Development, Graphic Design & Consulting. We are known as one of the best software companies in It World.<br>
+              We use trending programming language for web development like Python, Django, REACT JS.
+              <br><br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ABOUT COMPANY  -->
+  
+
+  <!-- COUNTER SECTION PROJECTS, COUNTRIES, CLIENTS, TEAM MEMBERS  -->
+  <section id="counter" class="counter">
+        <div class="container" data-aos="fade-up">
+          {% for c in count %}
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="icofont-slightly-smile animated" style="color:gold;"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="{{c.clients}}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Clients</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="icofont-handshake-deal animated" style="color: #c72d06;"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="{{c.projects}}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Projects</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="icofont-network-tower animated" style="color: #15be56;"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="{{c.countries}}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Countries</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="icofont-users-alt-5 animated" style="color: #9a09ee;"></i>
+                <div>
+                  <span data-purecounter-start="0" data-purecounter-end="{{c.members}}" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Team Members</p>
+                </div>
+              </div>
+            </div>
+          </div>
+       {% endfor %}
+        </div>
+  </section>
+  <!-- COUNTER SECTION PROJECTS, COUNTRIES, CLIENTS, TEAM MEMBERS  -->
+
+  
   <!-- SUCCESSTOY OR TESTIMONIAL SECTION  -->
   <section id="testimonials" class="testimonials  mt-10">
     <div class="container" data-aos="fade-up">
