@@ -14,6 +14,7 @@ class AboutUs(models.Model):
 
 class Projects(models.Model):
     project_title = models.CharField(max_length=200, null=True)
+    slug = models.SlugField(max_length=200, null=True)
     project_image = models.ImageField(upload_to='images', null=True)
     project_desc = models.TextField()
 
@@ -36,6 +37,11 @@ class TeamMember(models.Model):
     member_name = models.CharField(max_length=120, null=True)
     member_image = models.ImageField(upload_to='images/', null=True)
     member_designation = models.CharField(max_length=120, null=True, blank=True)
+    member_twitter = models.CharField(max_length=120, null=True, blank=True)
+    member_facebook = models.CharField(max_length=120, null=True, blank=True)
+    member_linkedin = models.CharField(max_length=120, null=True, blank=True)
+    member_github = models.CharField(max_length=120, null=True, blank=True)
+
 
     def __str__(self):
         return self.member_name
@@ -60,17 +66,23 @@ class Services(models.Model):
         else:
             return ""
 
+class ServiceImages(models.Model):
+    service = models.ForeignKey(Services, on_delete=models.CASCADE)
+    title = models.CharField(max_length=120, blank=True, null=True)
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
+
 class SuccessStory(models.Model):
-    story_title = models.CharField(max_length=120, null=True)
-    story_image = models.ImageField(upload_to='images', null=True)
-    story_message = models.TextField()
+    story_client_name = models.CharField(max_length=120, null=True)
+    story_client_image = models.ImageField(upload_to='images', null=True)
+    story_client_desig = models.CharField(max_length=120, null=True)
+    story_client_message = models.TextField()
 
     def __str__(self):
-        return self.story_title
+        return self.story_client_name
     
     def image_tag(self):
-        if self.story_image.url is not None:
-            return mark_safe('<img src="{}" height="50"/>'.format(self.story_image.url))
+        if self.story_client_image.url is not None:
+            return mark_safe('<img src="{}" height="50"/>'.format(self.story_client_image.url))
         else:
             return ""
 

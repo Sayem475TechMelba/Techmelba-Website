@@ -39,11 +39,12 @@
         border-radius: 4px;
       }
       .btn-bg{
-          background:yellow;
+          background:#9A8A62;
+          color: white;
       }
       .btn-bg:hover{
-          background:rgb(13, 52, 104);
-          color: white;
+          background: yellow;
+          color: black;
       }
       .btn{
           border-radius: 50px;
@@ -90,6 +91,21 @@
     </div>
   </div>
    <!-- OUR BANNER IMAGE WITH TITLE ENDS HERE  -->
+
+   {% if messages %}
+
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message: </strong>{{message}} 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    
+    {% endfor %}
+
+   {% endif %}
+
 <div class="container mt-10 mb-10">
     <div class="row">
         <div class="col-lg-3 bg-orange">
@@ -106,7 +122,7 @@
         <div class="col-lg-7 ml-3 p-4 form-bg  text-white">
             <h3>Let's Talk</h3>
             <p class="mt-0">
-                Contact us to get, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ainim veniam.
+                Contact us to get you desire service and take your services with effortable price. 
             </p>
 
             <form class="mt-4" method="POST">
@@ -124,24 +140,27 @@
                     <input type="email" name='email' class="form-control" id="email" placeholder="Email" required >
                   </div>
 
-                  <!-- <div class="form-group col-md-6">
-                    <input type="phone" name='user_contact' class="form-control" id="phone" placeholder="Contact No." required>
-                  </div> -->
                 </div>
                 <div class="form-group">
                   <textarea class="form-control s" name="message" id="message" rows="3" placeholder="Message" required></textarea>
 
                 </div>
-               
-                <div class="text-lg-start">
-                  <a href="#0" class="button12">
-                    <em> </em>   
+
+                
+                <!-- <div class="text-lg-start">
+                 
+                  <a type="button" class="button12">
+                    <em> </em> 
+                    
                      <span>
                       Contact Us
                        </span>
+                     
                    </a>
-                </div>
-                <!-- <button type="submit" class="btn btn-bg">Contact Us</button> -->
+                  
+                </div> -->
+             
+                <button type="submit" class="btn btn-bg">Contact Us</button>
               </form>
 
         </div>

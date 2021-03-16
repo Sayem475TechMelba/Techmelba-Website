@@ -1,12 +1,22 @@
 from django.shortcuts import render
 from django.views import View
 from django.contrib import messages
-
+from .models import *
 # Create your views here.
 
 class Home(View):
     def get(self, request):
-        return render(request, 'Home/home.html')
+        client = Clients.objects.all()
+        success = SuccessStory.objects.all()
+        all_projects = Projects.objects.all()
+        count = Counter.objects.all()
+        context = {
+            'client':client,
+            'success':success,
+            'all_projects': all_projects,
+            'count':count
+        }
+        return render(request, 'Home/home.html', context)
 
 class About(View):
     def get(self, request):
@@ -18,13 +28,13 @@ class Contact(View):
 
     def post(self, request):
         name = request.POST['name']
-        image = request.POST['image']
+        email = request.POST['email']
         contact = request.POST['contact']
         message = request.POST['message']
 
         cont = ContactUs(
             name=name,
-            image=image,
+            email=email,
             contact = contact,
             message = message
         )
@@ -33,7 +43,7 @@ class Contact(View):
         return render(request, 'Home/contact.html')
 
 
-class Projects(View):
+class OurProject(View):
     def get(self, request):
         return render(request, 'Home/projects.html')
 
@@ -43,4 +53,8 @@ class Service(View):
 
 class Team(View):
     def get(self, request):
-        return render(request, 'Home/team.html')
+        members = TeamMember.objects.all()
+        context = {
+            'members':members
+        }
+        return render(request, 'Home/team.html', context)
