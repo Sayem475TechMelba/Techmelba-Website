@@ -5,43 +5,102 @@
 
 {% block css %}
 <style>
-    .heading.heading--style-2 .heading__pre-title::before {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        height: 3px;
-        width: 40px;
-        margin-right: 10px;
-        margin-bottom: 3px;
-        background: purple;
-        position: relative;
-    }
+  /*--------------------------------------------------------------
+# Speakers Section
+--------------------------------------------------------------*/
+#speakers {
+  padding: 60px 0 30px 0;
+}
 
-    
-    .make-it-slow {
-        box-shadow:none;
-        transition: box-shadow 0.3s ease-in-out;
-    }
+#speakers .speaker {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
 
-/* Transition to a bigger shadow on hover */
-    .make-it-slow:hover {
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
+#speakers .speaker .details {
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
 
-    .item{
-        transition: transform .3s; /* Animation */
-        margin: 0 auto;
-    }
+#speakers .speaker .details h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
 
-    .item:hover{
-        transform: scale(1.2);
+#speakers .speaker .details p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
 
-    }
+#speakers .speaker .details .social {
+  height: 30px;
+}
 
-    .sayem img{
-     filter:brightness(0.5);
+#speakers .speaker .details a {
+  color: #fff;
+}
 
-    }
+#speakers .speaker .details a:hover {
+  color: #f82249;
+}
+
+#speakers .speaker:hover .details {
+  bottom: 0;
+}
+
+#speakers-details {
+  padding: 60px 0;
+}
+
+#speakers-details .details h2 {
+  color: #112363;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#speakers-details .details .social {
+  margin-bottom: 15px;
+}
+
+#speakers-details .details .social a {
+  background: #e9edfb;
+  color: #112363;
+  line-height: 1;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding-top: 9px;
+}
+
+#speakers-details .details .social a:hover {
+  background: #f82249;
+  color: #fff;
+}
+
+#speakers-details .details .social a i {
+  font-size: 18px;
+}
+
+#speakers-details .details p {
+  color: #112363;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
 </style>
 {% endblock css %}
 
@@ -64,7 +123,7 @@
   </div>
    <!-- OUR BANNER IMAGE WITH TITLE ENDS HERE  -->
 
-<main id="main">
+<!-- <main id="main">
     <section id="about" class="about ">
   
       <div class="container" data-aos="fade-up">
@@ -157,30 +216,100 @@
           </div>
       </div>
     </section>
-    <!-- End About Section -->
-  </main>
-  
-{% endblock body %}
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center" style="background:url(static/img/glob2.gpg);">
-    <div class="wave"></div>
-    <div  class="container-fluid" data-aos="fade-up">
-      <div id="particles-js">
-      <div  class="row justify-content-center">
-        <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Bettter Digital Experience With TechMelba</h1>
-          <h2>We are team of talented designers making websites with Html, CSS, JavaScript</h2>
-          <!-- <div><a href="#about" class="btn-get-started scrollto">Get Started</a></div> -->
-        </div>
-        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-          <img src="{% static 'img/banner/web-hosting-1.png' %}"  class="img-fluid animated" alt="">
-        </div>
+  </main> -->
+   <!-- ======= Speakers Section ======= -->
+   <section id="speakers">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header mb-5">
+        <h2>Our Projects</h2>
+        <p></p>
+      </div>
 
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'img/team/testimonials-2.jpg' %}" alt="Speaker 1" class="img-fluid">
+            <div class="details">
+              <h3><a href="speaker-details.html">Brenden Legros</a></h3>
+              <p>Quas alias incidunt</p>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'img/team/testimonials-3.jpg' %}" alt="Speaker 2" class="img-fluid">
+            <div class="details">
+              <h3><a href="speaker-details.html">Hubert Hirthe</a></h3>
+              <p>Consequuntur odio aut</p>
+              <div class="social">
+                <a href="#">View More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+            <img src="{% static 'img/team/testimonials-4.jpg' %}" alt="Speaker 3" class="img-fluid">
+            <div class="details">
+              <h3><a href="{% static 'img/team/testimonials-1.jpg' %}">Cole Emmerich</a></h3>
+              <p>Fugiat laborum et</p>
+              <div class="social">
+                <a href="#">View More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'img/team/testimonials-5.jpg' %}" alt="Speaker 4" class="img-fluid">
+            <div class="details">
+              <h3><a href="speaker-details.html">Jack Christiansen</a></h3>
+              <p>Debitis iure vero</p>
+              <div class="social">
+                <a href="#">View More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'img/team/testimonials-4.jpg' %}" alt="Speaker 5" class="img-fluid">
+            <div class="details">
+              <h3><a href="speaker-details.html">Alejandrin Littel</a></h3>
+              <p>Qui molestiae natus</p>
+              <div class="social">
+                <a href="#">View More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+            <img src="{% static 'img/team/testimonials-3.jpg' %}" alt="Speaker 6" class="img-fluid">
+            <div class="details">
+              <h3><a href="speaker-details.html">Intellect Wealth</a></h3>
+              <p>Australia</p>
+              <div class="social">
+                <a href="#">View More</a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  </section>
-  <!-- End Hero -->
+
+  </section><!-- End Speakers Section -->
+
+  
+{% endblock body %}
+
 
 {% block script %}
 {% endblock script %}
