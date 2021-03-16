@@ -1,0 +1,69 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %} TechMelba | Techmelba Projects {% endblock title %}
+{% block projectactive  %}active{% endblock projectactive  %}
+
+{% block css %}
+
+{% endblock css %}
+
+{% block body %}
+<main id="main">
+    <section id="about" class="about ">
+  
+      <div class="container" data-aos="fade-up">
+        
+
+
+        <div class="row gx-0">
+            <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+              
+                <div class="item">
+                  <img src="{{project.project_image.url}}" class="img-fluid " alt="">
+                </div>
+                
+            </div>
+            <div class="col-lg-6 d-flex flex-column justify-content-center  make-it-slow" data-aos="fade-up" data-aos-delay="200">
+              <div class="" >
+                <h2>{{project.project_title}}.</h2>
+            
+                <p class="justify-content text-muted">
+                {{project.project_desc|safe}}
+                </p>
+                
+              </div>
+            </div>
+    
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="container">
+    <div class=" mb-4">
+        <div class="p owl-carousel  owl-theme">
+            {% if images %}
+            {% for i in images %}
+            <div class="item">
+               <a href="{{i.image.url}}" data-gall="portfolioGallery" class="venobox">
+                <img width="100px;" height="100px;" src="{{i.image.url}}" class="img-fluid" alt="">
+                </a>
+            </div>
+            {% endfor %}
+            {% endif %}
+           
+        </div>
+   </div>
+
+  </div>
+
+{% endblock body %}
+
+
+{% block script %}
+<script>
+    
+
+    
+</script>
+{% endblock script %}

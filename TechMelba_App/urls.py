@@ -10,5 +10,6 @@ urlpatterns = [
     path('contact/', Contact.as_view(), name='Contact'),
     path('team/', Team.as_view(), name='Team'),
     path('projects/', OurProject.as_view(), name='Projects'),
+    path('<int:id>/<slug:slug>/', ProjectDetail.as_view(), name='project_detail'),
     path('service/', Service.as_view(), name='Service'),
 ]

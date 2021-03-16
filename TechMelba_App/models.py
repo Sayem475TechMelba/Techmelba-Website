@@ -16,6 +16,7 @@ class Projects(models.Model):
     project_title = models.CharField(max_length=200, null=True)
     slug = models.SlugField(max_length=200, null=True)
     project_image = models.ImageField(upload_to='images', null=True)
+    project_country = models.CharField(max_length=80, null=True, blank=True)
     project_desc = models.TextField()
 
     def __str__(self):
@@ -26,6 +27,8 @@ class Projects(models.Model):
             return mark_safe('<img src="{}" height="50"/>'.format(self.project_image.url))
         else:
             return ""
+    def get_absolute_url(self):
+        return reverse('project_detail', args=[self.id, self.slug])
 
 class ProjectImages(models.Model):
     project = models.ForeignKey(Projects, on_delete=models.CASCADE)

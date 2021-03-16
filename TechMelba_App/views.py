@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 from django.contrib import messages
 from .models import *
@@ -45,7 +45,23 @@ class Contact(View):
 
 class OurProject(View):
     def get(self, request):
-        return render(request, 'Home/projects.html')
+        all_project = Projects.objects.all()
+        context = {
+            'all_project': all_project
+        }
+        return render(request, 'Home/projects.html', context)
+
+class ProjectDetail(View):
+    def get(self, request, id, slug):
+        project = get_object_or_404(Projects, id=id, slug=slug)
+        images = ProjectImages.objects.filter(project_id=id)
+        
+        context = {
+
+			'project': project,
+            'images' : images
+		}
+        return render(request, 'Home/project_detail.html', context)
 
 class Service(View):
     def get(self, request):
