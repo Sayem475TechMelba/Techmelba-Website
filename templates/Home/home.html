@@ -13,11 +13,11 @@
 {% block body %}
 
   <!-- HOME BANNER SECTION  -->
-  <section id="hero" class="d-flex align-items-center">
+  <section  id="hero" class="d-flex align-items-center">
     <div class="wave"></div>
     <div  class="container-fluid" data-aos="fade-up">
-      <div id="particles-js">
-      <div  class="row justify-content-center">
+      <div >
+      <div  id="particles-js"  class="row justify-content-center">
         <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h1>
             <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, WELCOME TO TECHMELBA", "We Build Websites.", "We Design Logo.", "We Build Mobile APP." ]'>
@@ -88,7 +88,9 @@
         <div class="container mt-5">
           <div class="row" >
             <div class="col-lg-4 d-flex align-items-center justify-content-center " data-aos="zoom-out" data-aos-delay="200">
+              <a href="{% static 'img/icons/webdev.jpg' %}" data-gall="portfolioGallery" class="venobox">
               <img src="{% static 'img/icons/webdev.jpg' %}" class="img-fluid blob   " alt="">
+             </a>
             </div>
             <div class="col-lg-8 p-4 " data-aos="zoom-out" data-aos-delay="200">
               <h1>Web Development</h1>
@@ -132,8 +134,10 @@
                 </a>
             </div>
             <div class="col-lg-4 d-flex align-items-center justify-content-center " data-aos="zoom-out" data-aos-delay="200">
+              <a href="{% static 'img/icons/gr.jpg' %}" data-gall="portfolioGallery" class="venobox">
               <img src="{% static 'img/icons/gr.jpg' %}" class="img-fluid blob " alt="">
               <!-- <img src="{% static 'img/sideBanner/features.png' %}" class="img-fluid  blob " alt=""> -->
+              </a>
             </div>
           </div>
         </div>
@@ -142,7 +146,9 @@
         <div class="container mt-5">
           <div class="row" >
             <div class="col-lg-4 d-flex  align-items-center justify-content-center" data-aos="zoom-out" data-aos-delay="200">
+              <a href="{% static 'img/icons/seo9.jpg' %}" data-gall="portfolioGallery" class="venobox">
               <img src="{% static 'img/icons/seo9.jpg' %}" class="img-fluid blob " alt="">
+              </a>
             </div>
             <div class="col-lg-8 p-4 " data-aos="zoom-out" data-aos-delay="200">
               <h1>SEO</h1>
