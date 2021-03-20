@@ -1,0 +1,51 @@
+{% extends 'admin/base.html' %} {%load static%} {% block branding %}
+
+<h1 id="head " style="height: 100px;">
+  <img class="text-center mt-4"  src="{% static 'img/techmelba/logo2.png'%}" width="220" height="60" />
+ 
+</h1>
+
+{% endblock %}
+
+ {% block extrastyle%}
+
+<!-- <link rel="stylesheet" href="{% static 'css/adminstyle.css'%}" /> -->
+<style >
+#header {
+  background: #0f1b39; ;
+  color: #ffffff;
+
+}
+
+#branding h1 {
+  color: #ffffff;
+}
+
+div.breadcrumbs {
+  background: black;
+  color: white;
+}
+
+/*.login .submit-row {
+  padding: 0px !important;
+}
+*/
+input[type="submit"],
+input[type="button"],
+.submit-row input {
+  /*width: 100%;*/
+  background: black;
+}
+
+.module h2,
+.module caption,
+.inline-group h2 {
+  background: black;
+}
+
+.lead{
+  font-style: bold;
+}
+</style>
+
+{%endblock %}

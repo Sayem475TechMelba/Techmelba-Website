@@ -18,6 +18,8 @@ class Projects(models.Model):
     project_image = models.ImageField(upload_to='images', null=True)
     project_country = models.CharField(max_length=80, null=True, blank=True)
     project_desc = models.TextField()
+    project_tool_desc = models.TextField(blank=True, null=True)
+    project_site_link = models.CharField(max_length=120, blank=True, null=True)
 
     def __str__(self):
         return self.project_title

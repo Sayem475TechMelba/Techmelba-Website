@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'TechMelba_App',
+]+[
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +136,6 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 
 }
+
+# From Django 3.0, this setting is necessary for summernote iframe
+X_FRAME_OPTIONS = 'SAMEORIGIN'
